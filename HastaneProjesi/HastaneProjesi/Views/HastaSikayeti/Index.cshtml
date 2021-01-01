@@ -1,0 +1,50 @@
+﻿@model IEnumerable<HastaneProjesi.Models.HastaSikayeti>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+
+<br />
+<table id="example" class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+               Hastanın Şikayeti
+            </th>
+            <th>
+
+              Hasta Adı
+            </th>
+            <th width="40px">Güncelle</th>
+         
+            <th width="40px">Sİl</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.HastaSikayet)
+                </td>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.HastaKabul.Hastalar.Ad)
+                </td>
+                <td class="alert-dark">
+                    <a asp-action="Edit" class="btn btn-primary " asp-route-id="@item.Id">Güncelle</a>
+
+                </td>
+              
+                <td class="alert-dark">
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create" class="btn btn-warning"> Ekle</a>
+</p>
+

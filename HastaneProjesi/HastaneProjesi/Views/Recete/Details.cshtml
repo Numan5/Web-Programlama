@@ -1,0 +1,43 @@
+﻿@model HastaneProjesi.Models.Recete
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<div>
+    <h4>Recete</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            İlaç Adı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IlacAd)
+        </dd>
+        <dt class="col-sm-2">
+            Tahliller
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tahliller.TahlilAd)
+        </dd>
+        <dt class="col-sm-2">
+            Hasta Adı ve Soyadı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Ad)
+            @Html.DisplayFor(model => model.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Soyad)
+        </dd>
+        <dt class="col-sm-2">
+            Doktor Adı ve Soyadı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Doktorlar.Ad)
+            @Html.DisplayFor(model => model.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Doktorlar.Soyad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

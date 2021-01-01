@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HastaneProjesi.Models.HastaGecmisi>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<table id="example" class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                Geçirilen Hastalıklar
+            </th>
+            <th>
+               Geçirilen Ameliyatlar
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tarih)
+            </th>
+            <th>
+             Hasta Adı
+            </th>
+            <th>Güncelle</th>
+            <th>Detay</th>
+            <th>Sİl</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.GecirdigiHastaliklar)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.GecirdigiAmeliyatlar)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.Tarih)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.HastaSikayeti.HastaKabul.Hastalar.Ad)
+            </td>
+            <td class="alert-dark">
+                <a asp-action="Edit" class="btn btn-primary " asp-route-id="@item.Id">Güncelle</a>
+
+            </td>
+            <td class="alert-dark">
+                <a asp-action="Details" class="btn btn-success" asp-route-id="@item.Id">Detay</a>
+            </td>
+            <td class="alert-dark">
+                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Create" class="btn btn-warning">Ekle</a>
+</p>

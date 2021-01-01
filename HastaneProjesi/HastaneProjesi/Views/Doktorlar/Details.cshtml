@@ -1,0 +1,59 @@
+﻿@model HastaneProjesi.Models.Doktorlar
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<div>
+    <h4>Doktorlar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DogumYeri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DogumYeri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cinsiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cinsiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DogumTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Unvanlar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Unvanlar.UnvanAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Poliniklik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Poliniklik.PolinikAd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

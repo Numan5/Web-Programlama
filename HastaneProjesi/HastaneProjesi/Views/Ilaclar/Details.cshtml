@@ -1,0 +1,35 @@
+﻿@model HastaneProjesi.Models.Ilaclar
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<div>
+    <h4>Ilaclar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Adet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Adet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Recete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Recete.IlacAd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

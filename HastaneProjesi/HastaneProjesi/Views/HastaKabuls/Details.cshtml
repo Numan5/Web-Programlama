@@ -1,0 +1,39 @@
+﻿@model HastaneProjesi.Models.HastaKabul
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<div>
+    <h4>HastaKabul</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Geliş Tarihi
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GelisTarihi)
+        </dd>
+        <dt class="col-sm-2">
+            Hasta Adı ve soyadı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hastalar.Ad)
+            @Html.DisplayFor(model=>model.Hastalar.Soyad)
+        </dd>
+       
+        <dt class="col-sm-2">
+            Doktor Adı ve soyad
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Doktorlar.Ad)
+            @Html.DisplayFor(model => model.Doktorlar.Soyad)
+
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

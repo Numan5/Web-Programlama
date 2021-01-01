@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HastaneProjesi.Models.Ilaclar>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+
+<table id="example" class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recete)
+            </th>
+            <th>
+               Hasta Adı ve Soyad
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.Fiyat)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.Adet)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.Recete.IlacAd)
+            </td>
+            <td class="alert-dark">
+                @Html.DisplayFor(modelItem => item.Recete.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Ad)
+                @Html.DisplayFor(modelItem => item.Recete.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Soyad)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Ekle</a>
+</p>

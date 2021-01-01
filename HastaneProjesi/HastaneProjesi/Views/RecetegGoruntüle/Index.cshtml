@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HastaneProjesi.Models.Recete>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<table id="example" class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                Recete Giriş
+            </th>
+            <th>
+                Hasta Adı ve Soyadı
+            </th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.IlacAd)
+                </td>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Ad)
+                    @Html.DisplayFor(modelItem => item.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Soyad)
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

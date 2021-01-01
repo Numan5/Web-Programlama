@@ -1,0 +1,38 @@
+﻿@model HastaneProjesi.Models.Tahliller
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+<br />
+<h3>Silmek İstiyormusunuz?</h3>
+<div>
+    <h4>Tahliller</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TahlilAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TahlilAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TahlilSonucu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TahlilSonucu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hastaGecmisi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hastaGecmisi.GecirdigiAmeliyatlar)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+    </form>
+</div>

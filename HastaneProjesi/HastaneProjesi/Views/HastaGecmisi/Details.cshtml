@@ -1,0 +1,40 @@
+﻿@model HastaneProjesi.Models.HastaGecmisi
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+<br />
+<div>
+    <h4>HastaGecmisi</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GecirdigiHastaliklar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GecirdigiHastaliklar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GecirdigiAmeliyatlar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GecirdigiAmeliyatlar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HastaSikayeti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HastaSikayeti.HastaSikayet)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

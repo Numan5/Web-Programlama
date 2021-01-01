@@ -1,0 +1,184 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-HastaneProjesi-EC69F146-3095-44A2-ABFE-EB9119996DF5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201216150031_hastane.cs" />
+    <Compile Remove="Data\Migrations\20201216150031_hastane.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201230131405_yeni.cs" />
+    <Compile Remove="Data\Migrations\20201230131405_yeni.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\anasa\.editorconfig" />
+    <None Include="wwwroot\anasa\.gitignore" />
+    <None Include="wwwroot\anasa\.travis.yml" />
+    <None Include="wwwroot\anasa\dist\assets\img\avataaars.svg" />
+    <None Include="wwwroot\anasa\dist\assets\mail\contact_me.js" />
+    <None Include="wwwroot\anasa\dist\assets\mail\contact_me.php" />
+    <None Include="wwwroot\anasa\dist\assets\mail\jqBootstrapValidation.js" />
+    <None Include="wwwroot\anasa\dist\js\scripts.js" />
+    <None Include="wwwroot\anasa\LICENSE" />
+    <None Include="wwwroot\anasa\README.md" />
+    <None Include="wwwroot\anasa\scripts\build-assets.js" />
+    <None Include="wwwroot\anasa\scripts\build-pug.js" />
+    <None Include="wwwroot\anasa\scripts\build-scripts.js" />
+    <None Include="wwwroot\anasa\scripts\build-scss.js" />
+    <None Include="wwwroot\anasa\scripts\clean.js" />
+    <None Include="wwwroot\anasa\scripts\render-assets.js" />
+    <None Include="wwwroot\anasa\scripts\render-pug.js" />
+    <None Include="wwwroot\anasa\scripts\render-scripts.js" />
+    <None Include="wwwroot\anasa\scripts\render-scss.js" />
+    <None Include="wwwroot\anasa\scripts\sb-watch.js" />
+    <None Include="wwwroot\anasa\scripts\start-debug.js" />
+    <None Include="wwwroot\anasa\scripts\start.js" />
+    <None Include="wwwroot\anasa\src\assets\img\avataaars.svg" />
+    <None Include="wwwroot\anasa\src\assets\mail\contact_me.js" />
+    <None Include="wwwroot\anasa\src\assets\mail\contact_me.php" />
+    <None Include="wwwroot\anasa\src\assets\mail\jqBootstrapValidation.js" />
+    <None Include="wwwroot\anasa\src\js\scripts.js" />
+    <None Include="wwwroot\anasa\src\pug\index.pug" />
+    <None Include="wwwroot\anasa\src\scss\styles.scss" />
+    <None Include="wwwroot\anasa\src\scss\_buttons.scss" />
+    <None Include="wwwroot\anasa\src\scss\_contact.scss" />
+    <None Include="wwwroot\anasa\src\scss\_divider.scss" />
+    <None Include="wwwroot\anasa\src\scss\_footer.scss" />
+    <None Include="wwwroot\anasa\src\scss\_global.scss" />
+    <None Include="wwwroot\anasa\src\scss\_masthead.scss" />
+    <None Include="wwwroot\anasa\src\scss\_navbar.scss" />
+    <None Include="wwwroot\anasa\src\scss\_portfolio.scss" />
+    <None Include="wwwroot\anasa\src\scss\_variables.scss" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\css\common.scss" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\css\mixins.scss" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.bootstrap.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.bootstrap.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.bootstrap4.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.bootstrap4.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.colVis.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.colVis.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.flash.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.flash.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.foundation.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.foundation.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.html5.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.html5.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.jqueryui.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.jqueryui.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.print.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.print.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.semanticui.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\buttons.semanticui.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\dataTables.buttons.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\js\dataTables.buttons.min.js" />
+    <None Include="wwwroot\DataTables\Buttons-1.6.5\swf\flashExport.swf" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.bootstrap.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.bootstrap4.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.foundation.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.foundation.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.jqueryui.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.jqueryui.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.semanticui.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\dataTables.semanticui.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\jquery.dataTables.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.10.22\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\DataTables\datatables.js" />
+    <None Include="wwwroot\DataTables\datatables.min.js" />
+    <None Include="wwwroot\DataTables\JSZip-2.5.0\jszip.js" />
+    <None Include="wwwroot\DataTables\JSZip-2.5.0\jszip.min.js" />
+    <None Include="wwwroot\DataTables\pdfmake-0.1.36\pdfmake.js" />
+    <None Include="wwwroot\DataTables\pdfmake-0.1.36\pdfmake.min.js" />
+    <None Include="wwwroot\DataTables\pdfmake-0.1.36\vfs_fonts.js" />
+    <None Include="wwwroot\login\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\login\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\login\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\login\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\login\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\login\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\start\.browserslistrc" />
+    <None Include="wwwroot\start\.gitignore" />
+    <None Include="wwwroot\start\.travis.yml" />
+    <None Include="wwwroot\start\dist\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\start\dist\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\start\dist\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\start\dist\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\start\dist\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\start\dist\js\scripts.js" />
+    <None Include="wwwroot\start\LICENSE" />
+    <None Include="wwwroot\start\README.md" />
+    <None Include="wwwroot\start\scripts\build-assets.js" />
+    <None Include="wwwroot\start\scripts\build-pug.js" />
+    <None Include="wwwroot\start\scripts\build-scripts.js" />
+    <None Include="wwwroot\start\scripts\build-scss.js" />
+    <None Include="wwwroot\start\scripts\clean.js" />
+    <None Include="wwwroot\start\scripts\render-assets.js" />
+    <None Include="wwwroot\start\scripts\render-pug.js" />
+    <None Include="wwwroot\start\scripts\render-scripts.js" />
+    <None Include="wwwroot\start\scripts\render-scss.js" />
+    <None Include="wwwroot\start\scripts\sb-watch.js" />
+    <None Include="wwwroot\start\scripts\start-debug.js" />
+    <None Include="wwwroot\start\scripts\start.js" />
+    <None Include="wwwroot\start\src\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\start\src\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\start\src\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\start\src\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\start\src\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\start\src\js\scripts.js" />
+    <None Include="wwwroot\start\src\pug\layouts\authentication.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\dashboard.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\error.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\footer.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\head\css.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\head\icons.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\head\meta.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\head\title.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\navigation\sidenav.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\navigation\topnav.pug" />
+    <None Include="wwwroot\start\src\pug\layouts\includes\scripts.pug" />
+    <None Include="wwwroot\start\src\pug\pages\401.pug" />
+    <None Include="wwwroot\start\src\pug\pages\404.pug" />
+    <None Include="wwwroot\start\src\pug\pages\500.pug" />
+    <None Include="wwwroot\start\src\pug\pages\charts.pug" />
+    <None Include="wwwroot\start\src\pug\pages\includes\datatable.pug" />
+    <None Include="wwwroot\start\src\pug\pages\includes\page-header.pug" />
+    <None Include="wwwroot\start\src\pug\pages\index.pug" />
+    <None Include="wwwroot\start\src\pug\pages\layout-sidenav-light.pug" />
+    <None Include="wwwroot\start\src\pug\pages\layout-static.pug" />
+    <None Include="wwwroot\start\src\pug\pages\login.pug" />
+    <None Include="wwwroot\start\src\pug\pages\password.pug" />
+    <None Include="wwwroot\start\src\pug\pages\register.pug" />
+    <None Include="wwwroot\start\src\pug\pages\tables.pug" />
+    <None Include="wwwroot\start\src\scss\layout\_authentication.scss" />
+    <None Include="wwwroot\start\src\scss\layout\_dashboard-default.scss" />
+    <None Include="wwwroot\start\src\scss\layout\_dashboard-fixed.scss" />
+    <None Include="wwwroot\start\src\scss\layout\_error.scss" />
+    <None Include="wwwroot\start\src\scss\navigation\sidenav\_sidenav-dark.scss" />
+    <None Include="wwwroot\start\src\scss\navigation\sidenav\_sidenav-light.scss" />
+    <None Include="wwwroot\start\src\scss\navigation\sidenav\_sidenav.scss" />
+    <None Include="wwwroot\start\src\scss\navigation\_nav.scss" />
+    <None Include="wwwroot\start\src\scss\navigation\_topnav.scss" />
+    <None Include="wwwroot\start\src\scss\styles.scss" />
+    <None Include="wwwroot\start\src\scss\variables\_navigation.scss" />
+    <None Include="wwwroot\start\src\scss\variables\_spacing.scss" />
+    <None Include="wwwroot\start\src\scss\_global.scss" />
+    <None Include="wwwroot\start\src\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

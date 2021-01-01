@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HastaneProjesi.Models.Tahliller>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+<table id="example" class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+               Tahlil Adı
+            </th>
+            <th width="700px">
+               Tahlil Sonucu
+            </th>
+            <th>
+               Hasta Adı ve Soyadı
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.TahlilAd)
+                </td>
+                <td class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.TahlilSonucu)
+                </td>
+                <td  class="alert-dark">
+                    @Html.DisplayFor(modelItem => item.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Ad) 
+                    @Html.DisplayFor(modelItem => item.hastaGecmisi.HastaSikayeti.HastaKabul.Hastalar.Soyad) 
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

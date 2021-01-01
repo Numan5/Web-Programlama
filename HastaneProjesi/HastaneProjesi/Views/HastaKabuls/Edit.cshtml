@@ -1,0 +1,40 @@
+﻿@model HastaneProjesi.Models.HastaKabul
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="GelisTarihi" class="control-label"></label>
+                <input asp-for="GelisTarihi" class="form-control" />
+                <span asp-validation-for="GelisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HastalarId" class="control-label"></label>
+                <select asp-for="HastalarId" class="form-control" asp-items="ViewBag.HastalarId"></select>
+                <span asp-validation-for="HastalarId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoktorlarId" class="control-label"></label>
+                <select asp-for="DoktorlarId" class="form-control" asp-items="ViewBag.DoktorlarId"></select>
+                <span asp-validation-for="DoktorlarId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>
+

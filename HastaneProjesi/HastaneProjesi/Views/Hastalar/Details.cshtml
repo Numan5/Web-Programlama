@@ -1,0 +1,61 @@
+﻿@model HastaneProjesi.Models.Ilaclar
+
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+
+<br />
+<div>
+    <h4>Hastalar</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Doktor Adı Soyadı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recete.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Doktorlar.Ad) @Html.DisplayFor(model => model.Recete.Tahliller.hastaGecmisi.HastaSikayeti.HastaKabul.Doktorlar.Soyad)
+        </dd>
+
+        <dt class="col-sm-2">
+            Hasta'nın Şikayeti
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recete.Tahliller.hastaGecmisi.HastaSikayeti.HastaSikayet)
+        </dd>
+
+        <dt class="col-sm-2">
+            Hasta'nın Şikayet Sonucu
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recete.Tahliller.TahlilSonucu)
+        </dd>
+
+        <dt class="col-sm-2">
+            Reçete
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recete.IlacAd)
+        </dd>
+
+        <dt class="col-sm-2">
+            Adet
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adet)
+        </dd>
+        <dt class="col-sm-2">
+            Fiyat
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |*@
+    <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+</div>

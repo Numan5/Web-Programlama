@@ -1,0 +1,70 @@
+﻿@model HastaneProjesi.Models.Hastalar
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/Sablon.cshtml";
+}
+
+
+
+<h3>Silmek İstiyormusunuz?</h3>
+<div>
+    <h4>Hastalar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DogumTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MedeniHali)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MedeniHali)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DogumYeri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DogumYeri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Meslek)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Meslek)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cinsiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cinsiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KanGrubu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KanGrubu.KanGrubuAd)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Listeye Geri Dön</a>
+    </form>
+</div>

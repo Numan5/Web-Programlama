@@ -1,0 +1,96 @@
+﻿@model UserSignUpViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates,
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="~/login/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="~/login/css/fontawesome-all.css" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+
+
+<body>
+    <h1>Hastane Kullanıcı Kayit Formu</h1>
+
+
+    <div class=" w3l-login-form">
+        <h2>Kayit Ol</h2>
+        <form asp-action="KayitOl" method="post">
+            <div class=" w3l-form-group">
+                <label>Ad:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Adınız" required="required" />
+                </div>
+            </div>
+
+
+            <div class=" w3l-form-group">
+                <label>Soyad:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="text" asp-for="SurName" class="form-control" placeholder="Soyadınız" required="required" />
+                </div>
+            </div>
+
+
+            <div class=" w3l-form-group">
+                <label>Kullanıcı Adı</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" asp-for="UserName" class="form-control" placeholder="Kullanıcı Adı" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Şifre:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Şifre" required="required" />
+                </div>
+            </div>
+
+            <div class=" w3l-form-group">
+                <label>Tekrar Şifre:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Şifre" required="required" />
+                </div>
+            </div>
+
+
+            <div class="forgot">
+                <a href="#">Forgot Password?</a>
+                <p><input type="checkbox">Beni Hatırla</p>
+            </div>
+            <button type="submit">Kayit Ol</button>
+        </form>
+        <p class=" w3l-register-p">
+            Hesabınız Var mı?
+            <a asp-action="Index" asp-controller="Home" class="register"> Giriş Yap</a>
+        </p>
+    </div>
+   
+
+</body>
+
+</html>
